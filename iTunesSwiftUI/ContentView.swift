@@ -20,13 +20,15 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
             
-            Text("Artist Genre:")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                
-            Text("Artist Genre Placeholder")
-                .font(.subheadline)
-                .foregroundColor(.primary)
+            HStack {
+                Text("Artist Genre:")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                        
+                Text("Artist Genre Placeholder")
+                    .font(.subheadline)
+                    .foregroundColor(.primary)
+            }
             
             Spacer()
         }
