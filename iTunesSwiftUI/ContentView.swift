@@ -16,15 +16,14 @@ struct ContentView: View {
     var body: some View {
         VStack() {
             Text("Search for artists with iTunes API")
+            SearchBar()
                 .font(.subheadline)
-            TextField("Artist Name", text: $artistName)
-            TextField("Artist Genre", text: $artistGenre)
             Text(artistName)
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
-                .padding(12)
+                .padding([.leading, .bottom, .trailing], 12)
             
             HStack {
                 if !artistGenre.isEmpty {
