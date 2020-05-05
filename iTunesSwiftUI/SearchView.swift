@@ -29,6 +29,24 @@ extension SearchBar: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("Searched for \(searchBar.text!)")
         searchBar.endEditing(false)
+        
+        guard let query = searchBar.text else { return }
+        
+        iTunesAPI.searchArtists(for: query) { result in
+            do {
+                let artists = try result.get()
+                
+                guard let artist = artists.first else {
+                    print("No Artists Found")
+                    return
+                }
+                
+                print(artist)
+                
+            } catch {
+                print(error)
+            }
+        }
     }
 }
 
