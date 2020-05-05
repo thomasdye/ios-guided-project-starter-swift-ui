@@ -16,8 +16,10 @@ struct ContentView: View {
     var body: some View {
         VStack() {
             Text("Search for artists with iTunes API")
-            SearchBar()
                 .font(.subheadline)
+            
+            SearchBar()
+            
             Text(artistName)
                 .font(.largeTitle)
                 .bold()
