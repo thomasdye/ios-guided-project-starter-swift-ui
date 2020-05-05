@@ -10,11 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var artistName = "Artist Name Is Reallllllllly Long Placeholder"
+    var artistGenre = "Artist Genre Placeholder"
+    
     var body: some View {
         VStack() {
-            Text(/*@START_MENU_TOKEN@*/"Search for artists with iTunes API"/*@END_MENU_TOKEN@*/)
+            Text("Search for artists with iTunes API")
                 .font(.subheadline)
-            Text("Artist Name Is Reallllllllly Long Placeholder")
+            Text(artistName)
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
@@ -26,7 +29,7 @@ struct ContentView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                         
-                Text("Artist Genre Placeholder")
+                Text(artistGenre)
                     .font(.subheadline)
                     .foregroundColor(.primary)
             }
