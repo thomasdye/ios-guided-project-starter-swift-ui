@@ -12,10 +12,13 @@ struct SearchBar: UIViewRepresentable {
     typealias UIViewType = UISearchBar
     
     func makeUIView(context: Context) -> UISearchBar {
-        <#code#>
+        let searchBar = UISearchBar()
+        searchBar.searchBarStyle = .minimal
+        searchBar.autocapitalizationType = .none
+        return searchBar
     }
     
     func updateUIView(_ uiView: UISearchBar, context: Context) {
-        <#code#>
+        // Updateyour view whenever the SwiftUI state changes!
     }
 }
