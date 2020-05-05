@@ -12,8 +12,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack() {
-            Text("Artist Name Placeholder")
+            Text("Artist Name Is Really  Long Placeholder")
                 .font(.largeTitle)
+                .lineLimit(3)
         }
     }
 }
