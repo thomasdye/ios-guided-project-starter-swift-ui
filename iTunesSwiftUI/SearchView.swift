@@ -6,4 +6,16 @@
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+struct SearchBar: UIViewRepresentable {
+    typealias UIViewType = UISearchBar
+    
+    func makeUIView(context: Context) -> UISearchBar {
+        <#code#>
+    }
+    
+    func updateUIView(_ uiView: UISearchBar, context: Context) {
+        <#code#>
+    }
+}
