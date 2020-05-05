@@ -12,12 +12,21 @@ struct ContentView: View {
     
     var body: some View {
         VStack() {
+            Text(/*@START_MENU_TOKEN@*/"Search for artists with iTunes API"/*@END_MENU_TOKEN@*/)
+                .font(.subheadline)
             Text("Artist Name Is Really  Long Placeholder")
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
             
+            Text("Artist Genre:")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                
+            Text("Artist Genre Placeholder")
+                .font(.subheadline)
+                .foregroundColor(.primary)
             
             Spacer()
         }
@@ -26,6 +35,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .environment(\.colorScheme, .light)
+//            ContentView()
+//                .environment(\.colorScheme, .dark)
+        }
     }
 }
