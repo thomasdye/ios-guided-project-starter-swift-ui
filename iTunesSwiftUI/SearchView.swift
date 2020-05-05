@@ -19,6 +19,7 @@ final class SearchBar: NSObject, UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISearchBar, context: Context) {
+        uiView.delegate = self
         // Update your view whenever the SwiftUI state changes!
     }
 }
