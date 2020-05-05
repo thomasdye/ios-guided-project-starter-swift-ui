@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SearchBar: UIViewRepresentable {
+final class SearchBar: NSObject, UIViewRepresentable {
     typealias UIViewType = UISearchBar
     
     func makeUIView(context: Context) -> UISearchBar {
@@ -22,6 +22,11 @@ struct SearchBar: UIViewRepresentable {
         // Update your view whenever the SwiftUI state changes!
     }
 }
+
+extension SearchBar: UISearchBarDelegate {
+    
+}
+
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
