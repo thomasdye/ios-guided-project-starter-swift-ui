@@ -17,6 +17,8 @@ struct ContentView: View {
         VStack() {
             Text("Search for artists with iTunes API")
                 .font(.subheadline)
+            TextField("Artist Name", text: artistName)
+            TextField("Artist Genre", text: artistGenre)
             Text(artistName)
                 .font(.largeTitle)
                 .bold()
