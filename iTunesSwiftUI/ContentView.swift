@@ -10,15 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var artistName = "Artist Name Is Reallllllllly Long Placeholder"
-    var artistGenre = "Artist Genre Placeholder"
+    @State var artistName = "Artist Name Is Reallllllllly Long Placeholder"
+    @State var artistGenre = "Artist Genre Placeholder"
     
     var body: some View {
         VStack() {
             Text("Search for artists with iTunes API")
                 .font(.subheadline)
-//            TextField("Artist Name", text: artistName)
-//            TextField("Artist Genre", text: artistGenre)
+            TextField("Artist Name", text: $artistName)
+            TextField("Artist Genre", text: $artistGenre)
             Text(artistName)
                 .font(.largeTitle)
                 .bold()
