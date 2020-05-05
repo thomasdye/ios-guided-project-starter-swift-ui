@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var artistName = "Artist Name Is Reallllllllly Long Placeholder"
-    @State var artistGenre = "Artist Genre Placeholder"
+    @State var artistName = ""
+    @State var artistGenre = ""
     
     var body: some View {
         VStack() {
