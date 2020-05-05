@@ -18,7 +18,7 @@ struct ContentView: View {
             Text("Search for artists with iTunes API")
                 .font(.subheadline)
             
-            SearchBar()
+            SearchBar(artistName: $artistName, artistGenre: $artistGenre)
             
             Text(artistName)
                 .font(.largeTitle)
