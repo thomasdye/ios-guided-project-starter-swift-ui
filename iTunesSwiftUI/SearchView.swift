@@ -19,6 +19,19 @@ struct SearchBar: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISearchBar, context: Context) {
-        // Updateyour view whenever the SwiftUI state changes!
+        // Update your view whenever the SwiftUI state changes!
+    }
+}
+
+struct SearchBar_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            SearchBar()
+                .environment(\.colorScheme, .light)
+            
+            NavigationView {
+                SearchBar()
+            }.environment(\.colorScheme, .dark)
+        }
     }
 }
