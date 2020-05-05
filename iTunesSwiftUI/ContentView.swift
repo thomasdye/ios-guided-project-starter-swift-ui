@@ -27,9 +27,11 @@ struct ContentView: View {
                 .padding(12)
             
             HStack {
-                Text("Artist Genre:")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                if !artistGenre.isEmpty {
+                    Text("Artist Genre:")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
                         
                 Text(artistGenre)
                     .font(.subheadline)
