@@ -11,12 +11,12 @@ import SwiftUI
 final class SearchBar: NSObject, UIViewRepresentable {
     typealias UIViewType = UISearchBar
     
-    var artistName: String
-    var artistGenre: String
+    @Binding var artistName: String
+    @Binding var artistGenre: String
     
-    internal init(artistName: String = "", artistGenre: String = "") {
-        self.artistName = artistName
-        self.artistGenre = artistGenre
+    internal init(artistName: Binding<String> = .constant(""), artistGenre: Binding<String> = .constant("")) {
+        _artistName = artistName
+        _artistGenre = artistGenre
     }
     
     func makeUIView(context: Context) -> UISearchBar {
