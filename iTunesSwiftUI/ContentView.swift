@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack() {
             Text("Artist Name Placeholder")
+                .font(.largeTitle)
         }
     }
 }
