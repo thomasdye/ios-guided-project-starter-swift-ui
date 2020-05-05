@@ -11,6 +11,9 @@ import SwiftUI
 final class SearchBar: NSObject, UIViewRepresentable {
     typealias UIViewType = UISearchBar
     
+    var artistName: String = ""
+    var artistGenre: String = ""
+    
     func makeUIView(context: Context) -> UISearchBar {
         let searchBar = UISearchBar()
         searchBar.searchBarStyle = .minimal
@@ -37,14 +40,18 @@ extension SearchBar: UISearchBarDelegate {
                 let artists = try result.get()
                 
                 guard let artist = artists.first else {
-                    print("No Artists Found")
+                    self.artistName = "No Artists Found"
+                    self.artistGenre = ""
+                    
                     return
                 }
                 
-                print(artist)
+                self.artistName = artist.artistName
+                self.artistGenre = artist.primaryGenreName
                 
             } catch {
-                print(error)
+                self.artistName = "Error Searching for Artists"
+                self.artistGenre = ""
             }
         }
     }
