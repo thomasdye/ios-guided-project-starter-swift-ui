@@ -17,8 +17,8 @@ struct ContentView: View {
         VStack() {
             Text("Search for artists with iTunes API")
                 .font(.subheadline)
-            TextField("Artist Name", text: artistName)
-            TextField("Artist Genre", text: artistGenre)
+//            TextField("Artist Name", text: artistName)
+//            TextField("Artist Genre", text: artistGenre)
             Text(artistName)
                 .font(.largeTitle)
                 .bold()
@@ -46,8 +46,10 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
                 .environment(\.colorScheme, .light)
-//            ContentView()
-//                .environment(\.colorScheme, .dark)
+            
+            NavigationView {
+                ContentView()
+            }.environment(\.colorScheme, .dark)
         }
     }
 }
