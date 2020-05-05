@@ -14,8 +14,8 @@ struct ContentView: View {
         VStack() {
             Text("Artist Name Is Really  Long Placeholder")
                 .font(.largeTitle)
-                .multilineTextAlignment(.center)
                 .bold()
+                .multilineTextAlignment(.center)
                 .lineLimit(3)
         }
     }
