@@ -14,11 +14,12 @@ struct ContentView: View {
         VStack() {
             Text(/*@START_MENU_TOKEN@*/"Search for artists with iTunes API"/*@END_MENU_TOKEN@*/)
                 .font(.subheadline)
-            Text("Artist Name Is Really  Long Placeholder")
+            Text("Artist Name Is Reallllllllly Long Placeholder")
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
+                .padding(12)
             
             HStack {
                 Text("Artist Genre:")
