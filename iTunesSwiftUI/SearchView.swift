@@ -26,6 +26,10 @@ final class SearchBar: NSObject, UIViewRepresentable {
 
 extension SearchBar: UISearchBarDelegate {
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Searched for \(searchBar.text!)")
+        searchBar.endEditing(false)
+    }
 }
 
 
